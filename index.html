@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Kalaiselvi Borewells — Borewell Drilling in Tiruvannamalai</title>
+<meta name="description" content="Reliable borewell drilling and rig services in Tiruvannamalai, Tamil Nadu, for homes, farms and commercial properties.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="rail"><div class="rail-fill" id="railFill"></div></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="brand" onclick="showPage('home')">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2L16 20" stroke="#C98A45" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M9 6L16 2L23 6" stroke="#EFE8D6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 24C11 27 13.5 29 16 29C18.5 29 21 27 21 24C21 21.5 16 20 16 20C16 20 11 21.5 11 24Z" fill="#4FA7B0"/>
+      </svg>
+      <span class="brand-text">Sri Kalaiselvi Borewells<small>Tiruvannamalai · Tamil Nadu</small></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <button data-page="home" class="active" onclick="showPage('home')">Home</button>
+      <button data-page="about" onclick="showPage('about')">About</button>
+      <button data-page="services" onclick="showPage('services')">Services</button>
+      <button data-page="gallery" onclick="showPage('gallery')">Gallery</button>
+      <button data-page="contact" onclick="showPage('contact')">Contact</button>
+    </nav>
+    <a class="nav-call" href="tel:+919944345286">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+      <span class="long">99443 45286</span>
+    </a>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" onclick="toggleMobileNav()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="mobile-links" id="mobileLinks">
+    <button data-page="home" class="active" onclick="showPage('home')">Home</button>
+    <button data-page="about" onclick="showPage('about')">About</button>
+    <button data-page="services" onclick="showPage('services')">Services</button>
+    <button data-page="gallery" onclick="showPage('gallery')">Gallery</button>
+    <button data-page="contact" onclick="showPage('contact')">Contact</button>
+  </div>
+</header>
+
+<div class="float-actions">
+  <a class="fab call" href="tel:+919944345286" aria-label="Call Sri Kalaiselvi Borewells">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="white"/></svg>
+  </a>
+  <a class="fab whatsapp" href="https://wa.me/919944345286" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5-.1.2-.3.4-.4.5-.2.2-.3.3-.1.6.2.3.9 1.4 1.9 2.3 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.4.2.5.3.1.2.1.9-.1 1.5z" fill="white"/></svg>
+  </a>
+</div>
+
+<!-- ================= HOME ================= -->
+<main>
+<section class="page active band" id="page-home">
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="hero-eyebrow">Borewell drilling &amp; rig services</p>
+        <h1>Reliable borewell drilling for Tiruvannamalai</h1>
+        <p class="lede">Professional borewell drilling solutions for homes, farms and commercial properties. Reliable equipment, experienced operators, and groundwater solutions that work for your land.</p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="tel:+919944345286">Call Now — 99443 45286</a>
+          <a class="btn btn-outline" style="color:#f2e8d6;" href="https://wa.me/919944345286" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-rig-wrap">
+        <img class="hero-rig" src="images/hero-rig.png" alt="Sri Kalaiselvi Borewells drilling rig truck" loading="eager">
+      </div>
+    </div>
+  </div>
+
+  <section class="intro">
+    <div class="wrap grid">
+      <div>
+        <p class="kicker">Your trusted borewell partner</p>
+        <h2>Dependable drilling, done right the first time</h2>
+        <p class="body">Sri Kalaiselvi Borewells provides borewell drilling and rig services in and around Tiruvannamalai. We focus on dependable service, proper drilling practices, and timely completion of every project.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2v6M12 2l-4 3M12 2l4 3M6 22c0-4 2.5-6 6-6s6 2 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+          <div><h3>Reliable drilling service</h3><p>A professional approach to every drilling project, from the first visit to completion.</p></div>
+        </div>
+        <div class="why-item">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M7 10V6h10v4" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="20" r="1.6" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="20" r="1.6" stroke="currentColor" stroke-width="1.8"/></svg>
+          <div><h3>Modern rig equipment</h3><p>Suitable drilling equipment matched to different locations and ground conditions.</p></div>
+        </div>
+        <div class="why-item">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.8"/><path d="M5 21c0-4 3-6 7-6s7 2 7 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div><h3>Experienced operators</h3><p>Skilled handling of drilling operations, so each borewell is done safely and correctly.</p></div>
+        </div>
+        <div class="why-item">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg>
+          <div><h3>Local service</h3><p>Based in Tiruvannamalai and serving the surrounding areas we know well.</p></div>
+        </div>
+        <div class="why-item">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <div><h3>Customer-focused approach</h3><p>Clear communication and service tailored to your requirements, start to finish.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Need a borewell? Let's get started.</h2>
+      <p>Contact Sri Kalaiselvi Borewells to discuss your borewell drilling requirements.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="tel:+919944345286">Call 99443 45286</a>
+        <a class="btn btn-outline" href="#contact" onclick="showPage('contact')">Send an enquiry</a>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="page band" id="page-about">
+
+  <div class="about-hero">
+    <div class="wrap">
+      <p class="eyebrow">About us</p>
+      <h1>About Sri Kalaiselvi Borewells</h1>
+      <p class="lede"><strong>Sri Kalaiselvi Borewells</strong> is a borewell drilling service based in Tiruvannamalai, Tamil Nadu. We provide drilling and rig services for residential, agricultural, and commercial requirements. Our goal is simple — to provide reliable borewell drilling services with the right equipment, professional handling, and attention to each project.</p>
+    </div>
+  </div>
+
+  <div class="locate-strip">
+    <div class="wrap">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg>
+      <span>Located near Pachaiamman Kovil Arch, Tiruvannamalai — serving customers in Tiruvannamalai and surrounding areas.</span>
+    </div>
+  </div>
+
+  <section class="mission-grid">
+    <div class="wrap">
+      <div class="mcard">
+        <h3>Our mission</h3>
+        <p>To provide dependable and efficient borewell drilling services while maintaining professionalism, safety, and customer satisfaction.</p>
+      </div>
+      <div class="mcard">
+        <h3>Our vision</h3>
+        <p>To become a trusted borewell drilling service provider in the Tiruvannamalai region through quality work, reliable equipment, and customer-focused service.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-band">
+    <div class="wrap">
+      <h2>What we stand for</h2>
+      <div class="values-row">
+        <span class="value-chip">Reliability</span>
+        <span class="value-chip">Quality</span>
+        <span class="value-chip">Professionalism</span>
+        <span class="value-chip">Safety</span>
+        <span class="value-chip">Customer satisfaction</span>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="page band" id="page-services">
+
+  <div class="services-hero">
+    <div class="wrap">
+      <p class="eyebrow">What we do</p>
+      <h1>Our borewell services</h1>
+      <p class="lede">From a first home borewell to large commercial drilling projects, here's how we can help.</p>
+    </div>
+  </div>
+
+  <section class="services-grid-wrap">
+    <div class="wrap">
+      <div class="services-grid">
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 2v14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 5l5-3 5 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21c0-2.5 1.3-3.8 3-3.8s3 1.3 3 3.8" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h3>Borewell drilling</h3>
+          <p>Professional borewell drilling services for residential, agricultural, and commercial requirements.</p>
+        </div>
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="10" width="18" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M7 10V6h10v4" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="20" r="1.6" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="20" r="1.6" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h3>Borewell rig service</h3>
+          <p>Reliable rig services for drilling projects across different locations and ground conditions.</p>
+        </div>
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V10l7-5 7 5v10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h3>Agricultural borewell drilling</h3>
+          <p>Drilling solutions for agricultural land where groundwater is needed for irrigation.</p>
+        </div>
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-7 9 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h14V10" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="14" width="4" height="6" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h3>Residential borewell drilling</h3>
+          <p>Borewell drilling services for homes, individual properties, and residential projects.</p>
+        </div>
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h2M14 8h2M8 12h2M14 12h2M8 16h2M14 16h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Commercial borewell drilling</h3>
+          <p>Drilling support for commercial properties, institutions, and larger water requirements.</p>
+        </div>
+
+        <div class="scard">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l8-6 8 6v10" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 20h16" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="13" r="1.5" fill="currentColor"/></svg>
+          <h3>New borewell projects</h3>
+          <p>From site requirements to drilling operations, we support new borewell projects end to end.</p>
+        </div>
+
+        <div class="scard wide">
+          <svg class="ico" viewBox="0 0 24 24" fill="none"><path d="M12 19c-3.5 0-6.5-2-6.5-5.5C5.5 9.5 12 3 12 3s6.5 6.5 6.5 10.5c0 3.5-3 5.5-6.5 5.5z" stroke="white" stroke-width="1.8"/></svg>
+          <h3>Borewell drilling consultation</h3>
+          <p>Need help understanding your drilling requirements? Contact us to discuss your location, requirements, and project needs — before any drilling begins.</p>
+          <a class="btn btn-solid" href="tel:+919944345286">Call 99443 45286</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="services-cta">
+    <div class="wrap">
+      <h2>Looking for reliable borewell drilling?</h2>
+      <p>Talk to Sri Kalaiselvi Borewells today.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="tel:+919944345286">📞 99443 45286</a>
+        <a class="btn btn-outline" href="#contact" onclick="showPage('contact')">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="page band" id="page-gallery">
+
+  <div class="gallery-hero">
+    <div class="wrap">
+      <p class="eyebrow">Our work</p>
+      <h1>Our work gallery</h1>
+      <p class="lede">Take a look at our borewell drilling and rig operations across Tiruvannamalai and surrounding areas.</p>
+    </div>
+  </div>
+
+  <section class="gallery-grid-wrap">
+    <div class="wrap">
+      <div class="gallery-grid">
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-rig-generator.jpg" alt="Sri Kalaiselvi Borewells rig truck with generator unit" loading="lazy">
+        </div>
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-rig-side-1.jpg" alt="Sri Kalaiselvi Rig Service drilling truck" loading="lazy">
+        </div>
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-rig-side-2.jpg" alt="Sri Kalaiselvi Rig Service drilling truck close view" loading="lazy">
+        </div>
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-truck-front.jpg" alt="Sri Kalaiselvi Ashok Leyland drilling truck front view" loading="lazy">
+        </div>
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-fleet.png" alt="Two Sri Kalaiselvi borewell trucks parked together" loading="lazy">
+        </div>
+        <div class="gtile">
+          <img class="tile-bg" src="images/gallery-on-road.png" alt="Sri Kalaiselvi drilling truck on the highway at sunset" loading="lazy">
+        </div>
+      </div>
+      <div class="gallery-note">
+        <strong>More photos coming soon.</strong> Have other photos of our rig, team, or completed work? Send them over on WhatsApp and we'll add them here.
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-cta">
+    <div class="wrap">
+      <h2>Have a borewell requirement?</h2>
+      <p>Let our team help you with your next drilling project.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" style="background:#fff8ec;color:#241a10;" href="tel:+919944345286">Call 99443 45286</a>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="page band" id="page-contact">
+
+  <div class="contact-hero">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#4FA7B0;">Get in touch</p>
+      <h1>Contact Sri Kalaiselvi Borewells</h1>
+      <p class="lede">Have a borewell drilling requirement? Get in touch with us for more information about our services.</p>
+    </div>
+  </div>
+
+  <section class="contact-main">
+    <div class="wrap">
+      <div class="contact-info">
+        <h2>Visit or call us</h2>
+
+        <div class="info-line">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11.2A7 7 0 0 0 5 9.8C5 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.8"/></svg>
+          <div>
+            <strong>Sri Kalaiselvi Borewells</strong>
+            <span>Ponni Complex, 5, Vellore&ndash;Thoothukudi Hwy, Near Pachaiamman Kovil Arch, Tiruvannamalai, Annamalai R.F., Tamil Nadu &ndash; 606601</span>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.6c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+          <div>
+            <strong>Call us</strong>
+            <span><a href="tel:+919944345286">9944320236</a><br></span>
+            <span><a href="tel:+919442120236">94421 20236</a></span>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z" stroke="currentColor" stroke-width="1.8"/></svg>
+          <div>
+            <strong>WhatsApp</strong>
+            <span><a href="https://wa.me/919944345286" target="_blank" rel="noopener">Message us directly</a></span>
+          </div>
+        </div>
+
+        <div class="map-frame">
+          <iframe title="Sri Kalaiselvi Borewells location" loading="lazy"
+            src="https://www.google.com/maps?cid=7437670665261128131&output=embed"></iframe>
+        </div>
+      </div>
+
+      <form class="enquiry" id="enquiryForm">
+        <h2>Send an enquiry</h2>
+        <p>Fill this in and it opens WhatsApp with your details, ready to send to us.</p>
+
+        <div class="field">
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" name="phone" type="tel" placeholder="Enter your phone number" required>
+        </div>
+        <div class="field">
+          <label for="f-location">Location</label>
+          <input id="f-location" name="location" type="text" placeholder="Enter your location">
+        </div>
+        <div class="field">
+          <label for="f-service">Service required</label>
+          <select id="f-service" name="service">
+            <option value="">Select a service</option>
+            <option>Borewell drilling</option>
+            <option>Borewell rig service</option>
+            <option>Agricultural borewell drilling</option>
+            <option>Residential borewell drilling</option>
+            <option>Commercial borewell drilling</option>
+            <option>New borewell project</option>
+            <option>Drilling consultation</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="message" placeholder="Tell us about your borewell requirement"></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid">Send Enquiry</button>
+        <p class="form-note">Sending an enquiry opens WhatsApp on your device with your details filled in — nothing is stored on this site.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="quick-band">
+    <div class="wrap">
+      <h2>Need a borewell?</h2>
+      <p>Call us directly to discuss your requirements — 99443 45286 · Tiruvannamalai, Tamil Nadu</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="tel:+919944345286">📞 Call now</a>
+        <a class="btn btn-outline" style="color:#241a10;" href="https://wa.me/919944345286" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Sri Kalaiselvi Borewells, Tiruvannamalai.</span>
+    <span>Borewell drilling &amp; rig services · Tamil Nadu</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
